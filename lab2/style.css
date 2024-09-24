@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'HarryPotterFont';
+    src: url('fonts/harrypotter.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DesperateHousewivesFont';
+    src: url('fonts/desperatehousewives.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ShutterIslandFont';
+    src: url('fonts/shutterisland.ttf') format('truetype');
+}
+
+body {
+    background-color: #5a7a56;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1440px;
+    margin: 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+h3 {
+    color: #333;
+    font-size: 2em;
+}
+
+.description-1 {
+    font-family: 'HarryPotterFont', sans-serif;
+    text-align: left;
+}
+
+.description-2 {
+    font-family: 'DesperateHousewivesFont', sans-serif;
+    text-align: center;
+}
+
+.description-3 {
+    font-family: 'ShutterIslandFont', sans-serif;
+    text-align: right;
+}
+
+/* Якорные ссылки */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Изображения */
+.img-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 330px;
+    height: 240px;
+    border-radius: 15px;
+}
+
+/* Таблицы */
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
