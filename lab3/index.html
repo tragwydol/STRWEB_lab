@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета волшебника</title>
+    <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('fonts/harrypotter.ttf') format('truetype');
+        }
+        
+        body {
+            font-family: 'MyCustomFont', Arial, sans-serif;
+            background-color: #e89fbb;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #f9f8f8;
+            border-radius: 10px;
+            background-color: #cb7fad;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            padding: 0 10px;
+            color: #f9f5f5;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #c35c9a;
+            ;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #c35c9a;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Анкета волшебника</h1>
+
+<form action="submit_form.php" method="post">
+    <!-- Личная информация -->
+    <fieldset>
+        <legend>Если ты хочешь попасть в Хогвартс, заполни эту форму:</legend>
+        <label for="name">Твоё имя (Не Гарри случайно?):</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">Тот, чьё имя нельзя называть:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">Адрес, куда прилетит сова с письмом:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Твой телефон:</label>
+        <input type="tel" id="phone" name="phone" placeholder="8-999-123-4567" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    </fieldset>
+
+    <!-- Факультет -->
+    <fieldset>
+        <legend>Куда тебя распределим?</legend>
+        <label for="hobby">Опиши себя двумя словами:</label>
+        <input type="text" id="hobby" name="hobby">
+
+        <label>На какой факультет хочешь попасть?</label>
+        <input type="checkbox" id="slizerin" name="faculty" value="slitherin">
+        <label for="slitherin">Слизерин, если ты хитрый и амбициозный</label><br>
+        <input type="checkbox" id="griffindor" name="faculty" value="griffindor">
+        <label for="griffindor">Гриффиндор, если ты смелый и сильный</label><br>
+        <input type="checkbox" id="hufflepaff" name="faculty" value="hufflepaff">
+        <label for="hufflepaff">Пуффендуй, если ты добрый и чуткий</label><br>
+        <input type="checkbox" id="ravenclaw" name="faculty" value="ravenclaw">
+        <label for="ravenclaw">Когтевран, если ты умный и рассудительный</label><br>
+    </fieldset>
+
+    <!-- Пол -->
+    <fieldset>
+        <legend>Пол</legend>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Мужской</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Женский</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Домовой эльф</label>
+    </fieldset>
+
+    <!-- Файл -->
+    <fieldset>
+        <legend>Твоя родословная:</legend>
+        <label for="file">Выбери файл с родословной:</label>
+        <input type="file" id="file" name="file">
+    </fieldset>
+
+    <!-- Действия -->
+    <input type="submit" value="Отправить совой">
+    <input type="reset" value="Сбросить">
+</form>
+
+</body>
+</html>
