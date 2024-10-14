@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 4s ease-in infinite; /* время анимации и ускорение падения */
+}
+
+@keyframes bounce {
+    0% {
+        top: 0; /* начальная позиция */
+    }
+    20% {
+        top: 70vh; /* падение до дна */
+    }
+    30% {
+        top: 50vh; /* первый отскок (50%) */
+        transform: scaleY(0.7); /* деформация мяча */
+    }
+    40% {
+        top: 70vh; /* падение обратно */
+        transform: scaleY(1); /* возврат к норм форме */
+    }
+    50% {
+        top: 60vh; /* второй отскок */
+        transform: scaleY(0.7);
+    }
+    60% {
+        top: 70vh;
+        transform: scaleY(1);
+    }
+    70% {
+        top: 65vh; /* третий */
+        transform: scaleY(0.7);
+    }
+    80% {
+        top: 70vh;
+        transform: scaleY(1);
+    }
+    90% {
+        top: 67vh;
+        transform: scaleY(0.7);
+    }
+    95% {
+        top: 70vh;
+        transform: scaleY(1);
+    }
+    100% {
+        top: 70vh; /* конец на дне */
+        transform: scaleY(1);
+    }
+}
+/* пауза на дне */
+@keyframes rest {
+    0% {
+        top: 70vh;
+    }
+    100% {
+        top: 70vh;
+    }
+}
+

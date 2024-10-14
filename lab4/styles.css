@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.vibrating-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: pink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: vibrate 0.1s linear infinite;
+    transition: background-color 0.3s ease;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+vibrating-button:hover {
+    animation: none;
+    background-color: green;
+}
