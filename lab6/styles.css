@@ -7,7 +7,7 @@ html {
   }
 
   header {
-    background: rgb(52, 206, 142);
+    background-color: #ff1493;
     height: 100px;
   }
 
@@ -21,59 +21,56 @@ html {
   article {
     padding: 10px;
     margin: 10px;
-    background: rgba(16, 233, 215, 0.178);
+    background-color: #ffb6c1;
   }
-
-
 
 .grid {
   display: grid;
-  grid-template-areas:
-    "item1 item2 item3 item3"
-    "item1 item4 item3 item3"
-    "item1 item5 item6 item7"
-    "item8 item9 item9 item10";
-
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "it1 it2 it3 it3"
+    "it1 it4 it3 it3"
+    "it1 it5 it6 it7"
+    "it8 it9 it9 it10";
 }
 
 article:first-child{
-  grid-area: item1;
+  grid-area: it1;
 }
 
 article:nth-child(2){
-  grid-area: item2;
+  grid-area: it2;
 }
 
 article:nth-child(3){
-  grid-area: item3;
+  grid-area: it3;
 }
 
 article:nth-child(4){
-  grid-area: item4;
+  grid-area: it4;
 }
 
 article:nth-child(5){
-  grid-area: item5;
+  grid-area: it5;
 }
 
 article:nth-child(6){
-  grid-area: item6;
+  grid-area: it6;
 }
 
 article:nth-child(7){
-  grid-area: item7;
+  grid-area: it7;
 }
 
 article:nth-child(8){
-  grid-area: item8;
+  grid-area: it8;
 }
 
 article:nth-last-child(2){
-  grid-area: item9;
+  grid-area: it9;
 }
 
 article:last-child{
-  grid-area: item10;
+  grid-area: it10;
 }

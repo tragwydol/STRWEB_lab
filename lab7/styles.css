@@ -80,7 +80,7 @@ html {
   }
 
   header {
-    background: rgb(52, 206, 142);
+    background-color: #ff1493;
     height: 100px;
   }
 
@@ -94,5 +94,5 @@ html {
   article {
     padding: 10px;
     margin: 10px;
-    background: rgba(16, 233, 215, 0.178);
+    background-color: #ffb6c1;
   }
